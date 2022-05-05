@@ -42,3 +42,4 @@ const person3 = new CreatePerson('sa','ok');
  //console.log(person1.getFullName());
 // console.log(person2.getFullName());
  console.log(person3.getFullName());
+ console.log('kalinga');
