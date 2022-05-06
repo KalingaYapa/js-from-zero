@@ -63,11 +63,46 @@ const person3 = new CreatePerson('sa','ok');
  // filter array
 
 const numbers = [5,15,-1,24];
+
 const positiveNumbers1 =  numbers.filter(function(value) {
-    return value > 0;
+    return value >= 0;
 })
-// arrow functions
-const positiveNumbers = numbers.filter(n => n > 0);
+
+const positiveNumbers = numbers.filter(n => n >= 0);
 
 console.log(`positive numbers -> ${positiveNumbers}`);
 console.log(`positive numbers1 -> ${positiveNumbers1}`);
+
+// map array
+
+const mapItems = positiveNumbers.map(n=> '<li>' + n + '</li>');
+
+console.log(mapItems);
+
+const mapString = '<ul>' + mapItems.join('') + '</ul>';
+
+console.log(mapString);
+
+const filteredObjectArray = positiveNumbers.map(n => {
+    const obj = {value : n};
+    return obj;
+})
+// Chaining
+const items = numbers.filter(n => n >= 0).map(n=> ( {value : n}));
+
+console.log(filteredObjectArray);
+
+// reduce array
+const initialValue = 100;
+const currenctIndex = 2;
+const reducedVale = numbers.reduce((previousValue,currenctValue,index,numbers) => {
+    const returns = previousValue + currenctValue; 
+    console.log(`previous: ${previousValue}, current: ${currenctValue}, index: ${index}, returns: ${returns}`);
+    return returns;    
+},initialValue);
+
+console.log(reducedVale);
+
+
+
+
