@@ -42,4 +42,32 @@ const person3 = new CreatePerson('sa','ok');
  //console.log(person1.getFullName());
 // console.log(person2.getFullName());
  console.log(person3.getFullName());
- console.log('kalinga');
+
+
+ // cloning an object
+
+
+ const Circle = {
+     radiuos : 1,
+     draw() {
+         console.log('draw yeah ' + this.radiuos)
+     }
+ } 
+
+
+ const Circle1 = {...Circle};
+
+ console.log(Circle1.draw());
+
+
+ // filter array
+
+const numbers = [5,15,-1,24];
+const positiveNumbers1 =  numbers.filter(function(value) {
+    return value > 0;
+})
+// arrow functions
+const positiveNumbers = numbers.filter(n => n > 0);
+
+console.log(`positive numbers -> ${positiveNumbers}`);
+console.log(`positive numbers1 -> ${positiveNumbers1}`);
