@@ -104,5 +104,24 @@ const reducedVale = numbers.reduce((previousValue,currenctValue,index,numbers) =
 console.log(reducedVale);
 
 
+// getters and setters
+
+//js object
+const Person1 = {
+
+    firstName : 'Kalinga',
+    lastName : 'Yapa',
+    get fullName() {
+        console.log(`${this.firstName} ${this.lastName}`);
+    },
+    set fullName (value) {
+        this.firstName = value ? value.split(' ')[0] : this.firstName;
+        this.lastName = value ? value.split(' ')[1] : this.lastName;
+    }
+}
+
+Person1.fullName = 'Kalinga Yaparathna';
+
+console.log(Person1.fullName);
 
 
